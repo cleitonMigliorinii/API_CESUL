@@ -24,6 +24,8 @@ public class VendedorModel extends Pessoa {
     private  LocalDateTime dataInativacao;
     private boolean situacao;
 
+    private String tipoVendedor;
+
 
 
 }

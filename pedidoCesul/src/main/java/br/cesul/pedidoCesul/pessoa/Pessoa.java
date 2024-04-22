@@ -7,7 +7,8 @@ import java.util.UUID;
 
 @Entity
 @Data
-@Inheritance(strategy = InheritanceType.JOINED)
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "tipo_pessoa", discriminatorType = DiscriminatorType.STRING)
 public class Pessoa {
     @Id
     @GeneratedValue(generator = "UUID")
