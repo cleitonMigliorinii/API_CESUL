@@ -25,7 +25,7 @@ public class VendedorController {
 
             VendedorModel vendedorBanco = repository.findByEmail(vendedorModel.getEmail());
 
-            if(vendedorBanco == null){
+            if(vendedorBanco != null){
                 return  ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Usuario já cadastrado");
             }
 
